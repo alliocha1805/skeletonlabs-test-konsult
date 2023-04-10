@@ -4,7 +4,7 @@ import Chart from 'svelte-frappe-charts';
 import { ProgressRadial } from '@skeletonlabs/skeleton';
 import Timeline from '$lib/Timeline/Timeline.svelte';
 import { Table } from '@skeletonlabs/skeleton';
-import type { TableSource } from '@skeletonlabs/skeleton';
+
 
  //utilisation de la librairie svelte de chart  https://github.com/himynameisdave/svelte-frappe-charts
  let data = {
