@@ -27,9 +27,9 @@ import '@skeletonlabs/skeleton/themes/theme-skeleton.css';
 	<meta name="description" content="Test Dashboard KOnsult.io avec Skeleton UI" />
 </svelte:head>
 
-<div class="p-10 space-4 grid-cols-1 gap-4 md:grid grid-cols-4 gap-2">
+<div class="p-10 space-4 lg:grid grid-cols-4 gap-4">
 	<!--Card Graphique-->
-	<div class="card p-4 col-span-4 2xl:col-span-2">
+	<div class="card p-4 col-span-4 mb-5 lg:m-0 2xl:col-span-2">
 		<div class="p-4">
 			<div class="">
 				<p class="mb-0 font-sans font-semibold leading-normal text-lg">Chiffre d'affaire</p>
@@ -39,7 +39,7 @@ import '@skeletonlabs/skeleton/themes/theme-skeleton.css';
 		</div>
 	</div>
 	<!--Card avecc radial-->
-	<div class="card p-4 col-span-2 2xl:col-span-1">
+	<div class="card p-4 col-span-2 mb-5 lg:m-0 2xl:col-span-1">
 		<div class="p-4 flex flex-row -mx-3">
 			<div class="flex-none w-2/3 max-w-full px-3">
 				<p class="mb-0 font-sans font-semibold leading-normal text-lg">Consultants Actifs</p>
@@ -61,7 +61,7 @@ import '@skeletonlabs/skeleton/themes/theme-skeleton.css';
 	</div>
 	<!--Composant Timeline-->
 	<Timeline />
-	<div class="card p-4 col-span-2 2xl:col-span-1">
+	<div class="card p-4 col-span-2 mb-5 lg:m-0 2xl:col-span-1">
 		<div class="p-4 flex flex-row -mx-3">
 			<div class="flex-none w-2/3 max-w-full px-3">
 				<p class="mb-0 font-sans font-semibold leading-normal text-lg">Clients Actifs</p>

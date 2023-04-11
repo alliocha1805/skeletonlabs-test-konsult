@@ -1,6 +1,8 @@
 <script lang="ts">
   import { page } from '$app/stores'
 	import { Avatar } from '@skeletonlabs/skeleton';
+	import { TabGroup, Tab } from '@skeletonlabs/skeleton';
+	let tabSet: number = 0;
 </script>
 
 <svelte:head>
@@ -24,7 +26,14 @@
 		</div>
 		<div class="card p-4 col-span-4 bg-variant-filled-surface flex flex-col">
 			<h2 class= "text-center">Missions</h2>
-			<div class="flex flex-row flex-wrap">
+			<TabGroup>
+				<Tab bind:group={tabSet} name="tab1" value={0}>Toutes les missions</Tab>
+				<Tab bind:group={tabSet} name="tab2" value={1}>Missions en cours</Tab>
+				<Tab bind:group={tabSet} name="tab3" value={2}>Missions terminées</Tab>
+				<!-- Tab Panels --->
+				<svelte:fragment slot="panel">
+					{#if tabSet === 0}
+			<div class="flex flex-row">
 				<a class="block card card-hover p-4 m-5 variant-filled-surface w-full 2xl: w-1/2 m-1" href="#">
 					<div class="flex flex-row">
 						<Avatar src="https://dnfx0kvkzsynw.cloudfront.net/websites/25/personnages/arthur.jpg" width="w-32" class="mr-10 hidden none md:block"/>
@@ -46,5 +55,12 @@
 					</div>
 				</a>
 			</div>
+					{:else if tabSet === 1}
+						(tab panel 2 contents)
+					{:else if tabSet === 2}
+						(tab panel 3 contents)
+					{/if}
+				</svelte:fragment>
+			</TabGroup>
 		</div>
 </div>

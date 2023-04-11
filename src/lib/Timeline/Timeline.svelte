@@ -2,7 +2,7 @@
 
 </script>
 
-<div class="card p-4 col-span-2 2xl:col-span-1">
+<div class="card p-4 col-span-2 mb-5 lg:m-0 2xl:col-span-1">
 		<div class="p-4 flex flex-row -mx-3">
 			<div class="flex-none w-2/3 max-w-full px-3">
 				<p class="mb-0 font-sans font-semibold leading-normal text-lg">Derniers événements</p>
