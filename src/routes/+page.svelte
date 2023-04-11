@@ -91,9 +91,38 @@ import '@skeletonlabs/skeleton/themes/theme-skeleton.css';
 			</div>
 		</div>
 	</div>
+		<div class="card p-4 col-span-2 2xl:col-span-1">
+		<div class="p-4 flex flex-row -mx-3">
+			<div class="flex-none w-2/3 max-w-full px-3">
+				<p class="mb-0 font-sans font-semibold leading-normal text-lg">Missions en cours</p>
+				<h5 class="text-green mb-0 font-bold">24</h5>
+			</div>
+			<div class="px-3 text-right basis-1/3">
+				<div class="inline-block w-12 h-12 text-center 500">
+					<svg class="h-16 w-16 text-green-500"  width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">  <path stroke="none" d="M0 0h24v24H0z"/>  <rect x="3" y="7" width="18" height="13" rx="2" />  <path d="M8 7v-2a2 2 0 0 1 2 -2h4a2 2 0 0 1 2 2v2" />  <line x1="12" y1="12" x2="12" y2="12.01" />  <path d="M3 13a20 20 0 0 0 18 0" />
+					</svg>
+				</div>
+			</div>
+		</div>
+	</div>
+		<div class="card p-4 col-span-2 2xl:col-span-1">
+		<div class="p-4 flex flex-row -mx-3">
+			<div class="flex-none w-2/3 max-w-full px-3">
+				<p class="mb-0 font-sans font-semibold leading-normal text-lg">Clients Inactifs</p>
+				<h5 class="text-green mb-0 font-bold">24</h5>
+			</div>
+			<div class="px-3 text-right basis-1/3">
+				<div class="inline-block w-12 h-12 text-center 500">
+					<svg class="h-16 w-16 text-red-500"  fill="none" viewBox="0 0 24 24" stroke="currentColor">
+						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 17h8m0 0V9m0 8l-8-8-4 4-6-6"/>
+					</svg>
+				</div>
+			</div>
+		</div>
+	</div>
 	<div class="table-container text-token col-span-4 bg-surface-800">
 		<table class="table-hover table-comfortable w-full">
-			<thead class="bg-surface-700">
+			<thead class="h-14 bg-surface-700">
 				<tr>
 					<th class="table-cell-fit">Nom consultant</th>
 					<th class="table-cell-fit">Grade</th>
@@ -158,7 +187,12 @@ import '@skeletonlabs/skeleton/themes/theme-skeleton.css';
 					</span>
 					</td>
 				</tr>
-			</tbody>		
+			</tbody>
+			<tfoot class="p-4">
+				<tr>
+					<th colspan="5" class="p-5"><a href="/consultant" class="btn variant-filled">Voir tous les consultants</a></th>
+				</tr>
+			</tfoot>		
 		</table>
 	</div>
 </div>
