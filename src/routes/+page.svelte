@@ -108,6 +108,18 @@ import '@skeletonlabs/skeleton/themes/theme-skeleton.css';
 					<td>1321</td>
 					<td>1321</td>
 				</tr>
+				<tr>
+					<td>1321</td>
+					<td>1321</td>
+					<td>1321</td>
+					<td>1321</td>
+				</tr>
+				<tr>
+					<td>1321</td>
+					<td>1321</td>
+					<td>1321</td>
+					<td>1321</td>
+				</tr>
 			</tbody>
 			<tfoot>
 				<tr>

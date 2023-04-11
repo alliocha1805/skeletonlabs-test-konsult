@@ -55,8 +55,10 @@
 	<!-- Router Slot -->
 	<slot />
 	<!-- ---- / ---- -->
-
-	<svelte:fragment slot="footer">
+	<svelte:fragment slot="pageFooter">
 		<div class="bg-surface-100-800-token  space-y-4 p-4">Footer</div>
 	</svelte:fragment>
+	<!--<svelte:fragment slot="footer">
+		<div class="bg-surface-100-800-token  space-y-4 p-4">Footer Extérieur</div>
+	</svelte:fragment>-->
 </AppShell>
