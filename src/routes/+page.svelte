@@ -109,7 +109,7 @@ import '@skeletonlabs/skeleton/themes/theme-skeleton.css';
 					<td class="table-cell-fit text-center">Oui</td>
 					<td class="table-cell-fit text-center">492</td>
 					<td class="table-cell-fit text-center">
-					<span class="chip variant-soft hover:variant-filled" on:click={doSomething}>
+					<span class="chip variant-soft hover:variant-filled">
 						<span><svg class="h-4 w-4 text-white"  width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">  <path stroke="none" d="M0 0h24v24H0z"/>  <circle cx="12" cy="12" r="1" />  <circle cx="12" cy="19" r="1" />  <circle cx="12" cy="5" r="1" /></svg></span>
 					</span>
 					</td>
@@ -120,7 +120,7 @@ import '@skeletonlabs/skeleton/themes/theme-skeleton.css';
 					<td class="table-cell-fit text-center">Oui</td>
 					<td class="table-cell-fit text-center">492</td>
 					<td class="table-cell-fit text-center">
-					<span class="chip variant-soft hover:variant-filled" on:click={doSomething}>
+					<span class="chip variant-soft hover:variant-filled">
 						<span><svg class="h-4 w-4 text-white"  width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">  <path stroke="none" d="M0 0h24v24H0z"/>  <circle cx="12" cy="12" r="1" />  <circle cx="12" cy="19" r="1" />  <circle cx="12" cy="5" r="1" /></svg></span>
 					</span>
 					</td>
@@ -131,7 +131,29 @@ import '@skeletonlabs/skeleton/themes/theme-skeleton.css';
 					<td class="table-cell-fit text-center">Oui</td>
 					<td class="table-cell-fit text-center">492</td>
 					<td class="table-cell-fit text-center">
-					<span class="chip variant-soft hover:variant-filled" on:click={doSomething}>
+					<span class="chip variant-soft hover:variant-filled">
+						<span><svg class="h-4 w-4 text-white"  width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">  <path stroke="none" d="M0 0h24v24H0z"/>  <circle cx="12" cy="12" r="1" />  <circle cx="12" cy="19" r="1" />  <circle cx="12" cy="5" r="1" /></svg></span>
+					</span>
+					</td>
+				</tr>
+				<tr>
+					<td class="table-cell-fit text-center">Arthur Pendragon</td>
+					<td class="table-cell-fit text-center">Directeur</td>
+					<td class="table-cell-fit text-center">Oui</td>
+					<td class="table-cell-fit text-center">492</td>
+					<td class="table-cell-fit text-center">
+					<span class="chip variant-soft hover:variant-filled">
+						<span><svg class="h-4 w-4 text-white"  width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">  <path stroke="none" d="M0 0h24v24H0z"/>  <circle cx="12" cy="12" r="1" />  <circle cx="12" cy="19" r="1" />  <circle cx="12" cy="5" r="1" /></svg></span>
+					</span>
+					</td>
+				</tr>
+				<tr>
+					<td class="table-cell-fit text-center">Arthur Pendragon</td>
+					<td class="table-cell-fit text-center">Directeur</td>
+					<td class="table-cell-fit text-center">Oui</td>
+					<td class="table-cell-fit text-center">492</td>
+					<td class="table-cell-fit text-center">
+					<span class="chip variant-soft hover:variant-filled">
 						<span><svg class="h-4 w-4 text-white"  width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">  <path stroke="none" d="M0 0h24v24H0z"/>  <circle cx="12" cy="12" r="1" />  <circle cx="12" cy="19" r="1" />  <circle cx="12" cy="5" r="1" /></svg></span>
 					</span>
 					</td>

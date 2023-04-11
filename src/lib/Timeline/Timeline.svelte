@@ -16,9 +16,9 @@
 			</div>
 		</div>
     <div class="p-4 grid grid-cols-1 gap-2 -mx-3">
-      <a class="card p-4" href="/consultant/24">Arthur Pendragon rejoint le cabinet !</a>
-      <a class="card p-4" href="/">Hover Me!</a>
-      <a class="card p-4" href="/">Hover Me!</a>
-      <a class="card p-4" href="/">Hover Me!</a>
+      <a class="card p-4 flex flex-row justify-center variant-filled-secondary" href="/consultant/24"><div class="w-1/12"><svg class="h-6 w-6 text-green-500"  width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">  <path stroke="none" d="M0 0h24v24H0z"/>  <circle cx="9" cy="7" r="4" />  <path d="M3 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />  <path d="M16 11h6m-3 -3v6" /></svg></div><div class="w-11/12">Arthur Pendragon rejoint le cabinet !</div></a>
+      <a class="card p-4 variant-filled-secondary" href="/">Hover Me!</a>
+      <a class="card p-4 variant-filled-secondary" href="/">Hover Me!</a>
+      <a class="card p-4 variant-filled-secondary" href="/">Hover Me!</a>
     </div>
 </div>

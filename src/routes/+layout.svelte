@@ -56,7 +56,7 @@
 	<slot />
 	<!-- ---- / ---- -->
 	<svelte:fragment slot="pageFooter">
-		<div class="bg-surface-100-800-token  space-y-4 p-4">Footer</div>
+		<div class="bg-surface-100-800-token  space-y-4 p-4">Konsult.io TradeMark Piloy de la société Piloy</div>
 	</svelte:fragment>
 	<!--<svelte:fragment slot="footer">
 		<div class="bg-surface-100-800-token  space-y-4 p-4">Footer Extérieur</div>
