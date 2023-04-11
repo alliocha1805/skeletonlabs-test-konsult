@@ -3,8 +3,6 @@ import { Avatar } from '@skeletonlabs/skeleton';
 import Chart from 'svelte-frappe-charts';
 import { ProgressRadial } from '@skeletonlabs/skeleton';
 import Timeline from '$lib/Timeline/Timeline.svelte';
-import { Table } from '@skeletonlabs/skeleton';
-import type { TableSource } from '@skeletonlabs/skeleton';
 import '@skeletonlabs/skeleton/styles/all.css';
 import '@skeletonlabs/skeleton/themes/theme-skeleton.css';
  //utilisation de la librairie svelte de chart  https://github.com/himynameisdave/svelte-frappe-charts
@@ -22,23 +20,6 @@ import '@skeletonlabs/skeleton/themes/theme-skeleton.css';
 	let pourcentageConsultantActif = nbConsultantActif/nbConsultant;
 	let value = 85;
 
-	const sourceData = [
-	{ position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H' },
-	{ position: 2, name: 'Helium', weight: 4.0026, symbol: 'He' },
-	{ position: 3, name: 'Lithium', weight: 6.941, symbol: 'Li' },
-	{ position: 4, name: 'Beryllium', weight: 9.0122, symbol: 'Be' },
-	{ position: 5, name: 'Boron', weight: 10.811, symbol: 'B' },
-	];
-	const tableSimple: TableSource = {
-		// A list of heading labels.
-		head: ['Name', 'Symbol', 'Weight'],
-		// The data visibly shown in your table body UI.
-		body: TableSource.tableMapperValues(sourceData, ['name', 'symbol', 'weight']),
-		// Optional: The data returned when interactive is enabled and a row is clicked.
-		meta: TableSource.tableMapperValues(sourceData, ['position', 'name', 'symbol', 'weight']),
-		// Optional: A list of footer labels.
-		foot: ['Total', '', '<code>31.7747</code>']
-	};
 </script>
 
 <svelte:head>
@@ -111,7 +92,6 @@ import '@skeletonlabs/skeleton/themes/theme-skeleton.css';
 		</div>
 	</div>
 	<div class="table-container text-token col-span-4 bg-surface-800">
-		<Table source={tableSimple} />
 		<table class="table-hover">
 			<thead>
 				<tr>
