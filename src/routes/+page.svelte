@@ -92,41 +92,35 @@ import '@skeletonlabs/skeleton/themes/theme-skeleton.css';
 		</div>
 	</div>
 	<div class="table-container text-token col-span-4 bg-surface-800">
-		<table class="table-hover">
+		<table class="table-hover table-comfortable w-full">
 			<thead>
 				<tr>
-					<th>Position</th>
-					<th>Name</th>
-					<th>Symbol</th>
-					<th>Weight</th>
+					<th class="table-cell-fit">Nom consultant</th>
+					<th class="table-cell-fit">Grade</th>
+					<th class="table-cell-fit">Actif ?</th>
+					<th class="table-cell-fit">TJM</th>
 				</tr>
 			</thead>
 			<tbody>
 				<tr>
-					<td>1321</td>
-					<td>1321</td>
-					<td>1321</td>
-					<td>1321</td>
+					<td class="table-cell-fit">Arthur Pendragon</td>
+					<td class="table-cell-fit">Directeur</td>
+					<td class="table-cell-fit">Oui</td>
+					<td class="table-cell-fit">492</td>
 				</tr>
 				<tr>
-					<td>1321</td>
-					<td>1321</td>
-					<td>1321</td>
-					<td>1321</td>
+					<td class="table-cell-fit">Arthur Pendragon</td>
+					<td class="table-cell-fit">Directeur</td>
+					<td class="table-cell-fit">Oui</td>
+					<td class="table-cell-fit">492</td>
 				</tr>
 				<tr>
-					<td>1321</td>
-					<td>1321</td>
-					<td>1321</td>
-					<td>1321</td>
+					<td class="table-cell-fit">Arthur Pendragon</td>
+					<td class="table-cell-fit">Directeur</td>
+					<td class="table-cell-fit">Oui</td>
+					<td class="table-cell-fit">492</td>
 				</tr>
-			</tbody>
-			<tfoot>
-				<tr>
-					<th colspan="3">Calculated Total Weight</th>
-					<td>1587</td>
-				</tr>
-			</tfoot>		
+			</tbody>		
 		</table>
 	</div>
 </div>

@@ -16,7 +16,7 @@
 			</div>
 		</div>
     <div class="p-4 grid grid-cols-1 gap-2 -mx-3">
-      <a class="card p-4" href="/">Hover Me!</a>
+      <a class="card p-4" href="/consultant/24">Arthur Pendragon rejoint le cabinet !</a>
       <a class="card p-4" href="/">Hover Me!</a>
       <a class="card p-4" href="/">Hover Me!</a>
       <a class="card p-4" href="/">Hover Me!</a>
