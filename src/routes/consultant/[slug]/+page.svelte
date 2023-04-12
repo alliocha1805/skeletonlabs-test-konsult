@@ -36,7 +36,7 @@
 			<div class="flex flex-row">
 				<a class="block card card-hover p-4 m-5 variant-filled-surface w-full 2xl: w-1/2 m-1" href="#">
 					<div class="flex flex-row">
-						<Avatar src="https://fr.web.img6.acsta.net/r_654_368/newsv7/20/09/07/17/09/2717008.jpg" width="w-32" class="mr-10 hidden none md:block"/>
+						<img src="https://fr.web.img6.acsta.net/r_654_368/newsv7/20/09/07/17/09/2717008.jpg" width="w-32" class="mr-10 hidden none md:block w-32 h-32"/>
 						<div class="flex flex-col justify-center">
 							<h5>Roi de Bretagne par interim</h5>
 							<p>Faut arrêter ces conneries de nord et de sud ! Une fois pour toutes, le nord, suivant comment on est tourné, ça change tout !</p>
