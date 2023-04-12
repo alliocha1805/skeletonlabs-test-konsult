@@ -4,26 +4,26 @@
 	import { onMount, afterUpdate } from 'svelte';
 
   const data = [
-    { name: "John", email: "john@example.com" },
-    { name: "Mark", email: "mark@gmail.com" },
-		{ name: "Mark", email: "mark@gmail.com" },
-		{ name: "Mark", email: "mark@gmail.com" },
-		{ name: "Mark", email: "mark@gmail.com" },
-		{ name: "Mark", email: "mark@gmail.com" },
-		{ name: "Mark", email: "mark@gmail.com" },
-		{ name: "Mark", email: "mark@gmail.com" },
-		{ name: "Mark", email: "mark@gmail.com" },
-		{ name: "Mark", email: "mark@gmail.com" },
-		{ name: "Mark", email: "mark@gmail.com" },
-		{ name: "Mark", email: "mark@gmail.com" },
-		{ name: "Mark", email: "mark@gmail.com" },
-		{ name: "Mark", email: "mark@gmail.com" },
-  ]
+    { name: "Kaamelott", secteur: "Militaire", actif : "Oui", consultants:12 },
+    { name: "Royaume de l'Ogre", secteur: "Militaire", actif : "Oui", consultants:12 },
+		{ name: "Francie", secteur: "Culture", actif : "Oui", consultants:12 },
+		{ name: "Senat de Rome", secteur: "Toge", actif : "Oui", consultants:12 },
+    { name: "Kaamelott", secteur: "Militaire", actif : "Oui", consultants:12 },
+    { name: "Royaume de l'Ogre", secteur: "Militaire", actif : "Oui", consultants:12 },
+		{ name: "Francie", secteur: "Culture", actif : "Oui", consultants:12 },
+		{ name: "Senat de Rome", secteur: "Toge", actif : "Oui", consultants:12 },
+    { name: "Kaamelott", secteur: "Militaire", actif : "Oui", consultants:12 },
+    { name: "Royaume de l'Ogre", secteur: "Militaire", actif : "Oui", consultants:12 },
+		{ name: "Francie", secteur: "Culture", actif : "Oui", consultants:12 },
+		{ name: "Senat de Rome", secteur: "Toge", actif : "Oui", consultants:12 },
+    { name: "Kaamelott", secteur: "Militaire", actif : "Oui", consultants:12 },
+    { name: "Kaamelott", secteur: "Militaire", actif : "Oui", consultants:12 },
+]
 
 	const className = {
 		table: 'table',
 		paginationButton: 'btn variant-filled',
-		paginationButtonCurrent: ' ml-2 mr-2',
+		paginationButtonCurrent: 'variant-filled-primary',
 		input:'input',
 		pagination: 'flex flex-col justify-end',
 		header:"text-black"

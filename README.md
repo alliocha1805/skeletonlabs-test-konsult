@@ -1,3 +1,3 @@
-# skeletonlabs-test-konsult
+# Konsult
 
 [Edit on StackBlitz ⚡️](https://stackblitz.com/edit/skeletonlabs-repl-kulwt4)
