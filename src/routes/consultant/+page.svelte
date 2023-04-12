@@ -4,7 +4,7 @@
 </svelte:head>
 
 <div class="p-10 space-4">
-	<h1 class="pb-5">About this app</h1>
+	<h1 class="pb-5">Liste des consultants</h1>
 
 	<p>
 		This is a <a href="https://kit.svelte.dev">SvelteKit</a> app. You can make your own by typing the
