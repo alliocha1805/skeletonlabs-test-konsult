@@ -1,21 +1,77 @@
+<script lang="ts">
+  import Grid from "gridjs-svelte"
+	import { frFR } from "gridjs/l10n";
+	import { onMount, afterUpdate } from 'svelte';
+	import { h, PluginPosition } from "gridjs";	
+	import { goto } from '$app/navigation';
+	function routeToPage(route: string, replaceState: boolean) {
+   goto(`/${route}`, { replaceState }) 
+	}
+
+	const columns=[
+		{
+			name:'id',
+			hidden:true},
+		'nom',
+		'prenom',
+		'fonction',
+		'actif',
+		'manager',
+		{
+			name: 'Action',
+			formatter: (cell, row) => {
+				return h('button', {
+					onClick: () => {
+						routeToPage('consultant/'+row.cells[0].data,false);
+					}
+				}, 'Voir la page consultant');
+			}
+		}
+	]
+  const data = [
+		[ 1,"Pendragon","Arthur", "Roi de Bretagne", "Oui", "Dieu", null],
+		[ 2,"Du Lac","Lancelot", "Traître", "Oui", "Meleagant", null],
+		[ 3,"Meleagant","???", "Incarnanation du mal ?", "Oui", "???", null],
+		[ 4,"Pendragon","Arthur", "Roi de Bretagne", "Oui", "Dieu", null],
+		[ 1,"Pendragon","Arthur", "Roi de Bretagne", "Oui", "Dieu", null],
+		[ 1,"Pendragon","Arthur", "Roi de Bretagne", "Oui", "Dieu", null],
+		[ 1,"Pendragon","Arthur", "Roi de Bretagne", "Oui", "Dieu", null],
+		[ 1,"Pendragon","Arthur", "Roi de Bretagne", "Oui", "Dieu", null],
+		[ 1,"Pendragon","Arthur", "Roi de Bretagne", "Oui", "Dieu", null],
+		[ 1,"Pendragon","Arthur", "Roi de Bretagne", "Oui", "Dieu", null],
+		[ 1,"Pendragon","Arthur", "Roi de Bretagne", "Oui", "Dieu", null],
+		[ 1,"Pendragon","Arthur", "Roi de Bretagne", "Oui", "Dieu", null],
+		[ 1,"Pendragon","Arthur", "Roi de Bretagne", "Oui", "Dieu", null],
+		[ 1,"Pendragon","Arthur", "Roi de Bretagne", "Oui", "Dieu", null],
+		[ 1,"Pendragon","Arthur", "Roi de Bretagne", "Oui", "Dieu", null],
+		[ 1,"Pendragon","Arthur", "Roi de Bretagne", "Oui", "Dieu", null],
+		[ 1,"Pendragon","Arthur", "Roi de Bretagne", "Oui", "Dieu", null],
+		[ 1,"Pendragon","Arthur", "Roi de Bretagne", "Oui", "Dieu", null],
+		[ 1,"Pendragon","Arthur", "Roi de Bretagne", "Oui", "Dieu", null],
+		[ 1,"Pendragon","Arthur", "Roi de Bretagne", "Oui", "Dieu", null],
+]
+
+	const className = {
+		table: 'table',
+		paginationButton: 'btn variant-filled',
+		paginationButtonCurrent: 'variant-filled-primary',
+		input:'input',
+		pagination: 'flex flex-col justify-end',
+		header: "text-black",
+		container : 'table-container'
+	};
+	const language = frFR;
+
+</script>
+
 <svelte:head>
-	<title>About</title>
-	<meta name="description" content="About this app" />
+	<title>Liste des consultants</title>
+	<meta name="description" content="Liste des consultants" />
 </svelte:head>
 
 <div class="p-10 space-4">
-	<h1 class="pb-5">Liste des consultants</h1>
-
-	<p>
-		This is a <a href="https://kit.svelte.dev">SvelteKit</a> app. You can make your own by typing the
-		following into your command line and following the prompts:
-	</p>
-
-	<pre>npm create svelte@latest</pre>
-
-	<p>
-		The page you're looking at is purely static HTML, with no client-side interactivity needed.
-		Because of that, we don't need to load any JavaScript. Try viewing the page's source, or opening
-		the devtools network panel and reloading.
-	</p>
+  <h1 class="pb-5">Liste des Consultants</h1>
+	<div id=my-grid-table>
+		<Grid data={data} {columns} {className} language={language} search pagination={{ enabled: true, limit: 10}}/>
+	</div>
 </div>

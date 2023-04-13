@@ -2,22 +2,46 @@
   import Grid from "gridjs-svelte"
 	import { frFR } from "gridjs/l10n";
 	import { onMount, afterUpdate } from 'svelte';
+	import { h, PluginPosition } from "gridjs";	
+	import { goto } from '$app/navigation';
+	function routeToPage(route: string, replaceState: boolean) {
+   goto(`/${route}`, { replaceState }) 
+	}
 
+	const columns=[
+		{
+			name:'id',
+			hidden:true},
+		'nom',
+		'secteur',
+		'actif',
+		'consultants',
+		{
+			name: 'Action',
+			formatter: (cell, row) => {
+				return h('button', {
+					onClick: () => {
+						routeToPage('client/'+row.cells[0].data,false);
+					}
+				}, 'Voir la page client');
+			}
+		}
+	]
   const data = [
-    { name: "Kaamelott", secteur: "Militaire", actif : "Oui", consultants:12 },
-    { name: "Royaume de l'Ogre", secteur: "Militaire", actif : "Oui", consultants:12 },
-		{ name: "Francie", secteur: "Culture", actif : "Oui", consultants:12 },
-		{ name: "Senat de Rome", secteur: "Toge", actif : "Oui", consultants:12 },
-    { name: "Kaamelott", secteur: "Militaire", actif : "Oui", consultants:12 },
-    { name: "Royaume de l'Ogre", secteur: "Militaire", actif : "Oui", consultants:12 },
-		{ name: "Francie", secteur: "Culture", actif : "Oui", consultants:12 },
-		{ name: "Senat de Rome", secteur: "Toge", actif : "Oui", consultants:12 },
-    { name: "Kaamelott", secteur: "Militaire", actif : "Oui", consultants:12 },
-    { name: "Royaume de l'Ogre", secteur: "Militaire", actif : "Oui", consultants:12 },
-		{ name: "Francie", secteur: "Culture", actif : "Oui", consultants:12 },
-		{ name: "Senat de Rome", secteur: "Toge", actif : "Oui", consultants:12 },
-    { name: "Kaamelott", secteur: "Militaire", actif : "Oui", consultants:12 },
-    { name: "Kaamelott", secteur: "Militaire", actif : "Oui", consultants:12 },
+    [ 1,"Kaamelott", "Militaire", "Oui", 12, null],
+    [ 2,"Royaume de l'Ogre", "Militaire", "Oui", 12, null],
+		[ 3, "Francie", "Culture", "Oui", 12, null],
+		[ 4,"Senat de Rome", "Toge", "Oui", 12, null],
+    [ 5,"Kaamelott", "Militaire", "Oui", 12, null],
+    [ 6,"Royaume de l'Ogre", "Militaire", "Oui", 12, null],
+		[ 7,"Francie", "Culture", "Oui", 12, null],
+		[ 8,"Senat de Rome", "Toge", "Oui", 12, null],
+    [ 9,"Kaamelott", "Militaire", "Oui", 12, null],
+    [ 10,"Royaume de l'Ogre", "Militaire", "Oui", 12, null],
+		[ 11,"Francie", "Culture", "Oui", 12, null],
+		[ 12,"Senat de Rome", "Toge", "Oui", 12, null],
+    [ 13,"Kaamelott", "Militaire", "Oui", 12, null],
+    [ 14,"Kaamelott", "Militaire", "Oui", 12, null],
 ]
 
 	const className = {
@@ -26,9 +50,11 @@
 		paginationButtonCurrent: 'variant-filled-primary',
 		input:'input',
 		pagination: 'flex flex-col justify-end',
-		header:"text-black"
+		header: "text-black",
+		container : 'table-container'
 	};
 	const language = frFR;
+
 </script>
 
 <svelte:head>
@@ -39,7 +65,7 @@
 <div class="p-10 space-4">
   <h1 class="pb-5">Liste des Clients</h1>
 	<div id=my-grid-table>
-		<Grid data={data} {className} language={language} search pagination={{ enabled: true, limit: 5}}/>
+		<Grid data={data} {columns} {className} language={language} search pagination={{ enabled: true, limit: 10}}/>
 	</div>
 </div>
 
