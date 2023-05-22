@@ -13,6 +13,7 @@
 	import type { PopupSettings } from '@skeletonlabs/skeleton';
 	import { computePosition, autoUpdate, offset, shift, flip, arrow } from '@floating-ui/dom';
 	import { storePopup } from '@skeletonlabs/skeleton';
+	import { LightSwitch } from '@skeletonlabs/skeleton';
 	storePopup.set({ computePosition, autoUpdate, offset, shift, flip, arrow });
 	function drawerOpen() 
   {
@@ -51,6 +52,7 @@
 			<strong class="text-xl uppercase">Konsult.io</strong>
 			
 			<svelte:fragment slot="trail">
+			<LightSwitch />
 			<div class="">
 				<button type="button" class="btn-icon btn-icon-xl variant-primary" use:popup={popupMenu}><svg class="h-10 w-10 text-white"  width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">  <path stroke="none" d="M0 0h24v24H0z"/>  <path d="M7 10h3v-3l-3.5 -3.5a6 6 0 0 1 8 8l6 6a2 2 0 0 1 -3 3l-6-6a6 6 0 0 1 -8 -8l3.5 3.5" /></svg></button>
 				<div class="card p-4 shadow-xl" data-popup="popupMenu">
