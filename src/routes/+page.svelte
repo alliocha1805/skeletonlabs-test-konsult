@@ -120,9 +120,9 @@ import '@skeletonlabs/skeleton/themes/theme-skeleton.css';
 			</div>
 		</div>
 	</div>
-	<div class="table-container text-token col-span-4 bg-surface-800">
+	<div class="table-container text-token col-span-4 dark:bg-surface-800">
 		<table class="table-hover table-comfortable w-full">
-			<thead class="h-14 bg-surface-700">
+			<thead class="h-14 dark:bg-surface-700">
 				<tr>
 					<th class="table-cell-fit">Nom consultant</th>
 					<th class="table-cell-fit">Grade</th>
