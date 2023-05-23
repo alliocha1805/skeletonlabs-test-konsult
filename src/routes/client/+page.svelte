@@ -16,16 +16,15 @@
 		'secteur',
 		'actif',
 		'consultants',
-		{
-			name: 'Action',
-			formatter: (cell, row) => {
-				return h('button', {
-					onClick: () => {
-						routeToPage('client/'+row.cells[0].data,false);
-					}
-				}, 'Voir la page client');
-			}
-		}
+    { 
+        name: 'Actions',
+        formatter: (cell, row) => {
+          return h('button', {
+            className: 'btn variant-filled-primary',
+            onClick: () => routeToPage('client/'+row.cells[0].data,false)
+          }, 'Voir');
+        }
+      },
 	]
   const data = [
     [ 1,"Kaamelott", "Militaire", "Oui", 12, null],
@@ -39,7 +38,7 @@
     [ 9,"Kaamelott", "Militaire", "Oui", 12, null],
     [ 10,"Royaume de l'Ogre", "Militaire", "Oui", 12, null],
 		[ 11,"Francie", "Culture", "Oui", 12, null],
-		[ 12,"Senat de Rome", "Toge", "Oui", 12, null],
+		[ 12,"Senat de Rome", "Toge", "Non", 12, null],
     [ 13,"Kaamelott", "Militaire", "Oui", 12, null],
     [ 14,"Kaamelott", "Militaire", "Oui", 12, null],
 ]
@@ -65,7 +64,7 @@
 <div class="p-10 space-4">
   <h1 class="pb-5">Liste des Clients</h1>
 	<div id=my-grid-table>
-		<Grid data={data} {columns} {className} language={language} search pagination={{ enabled: true, limit: 10}}/>
+		<Grid data={data} {columns} {className} language={language} search sort=true pagination={{ enabled: true, limit: 5}}/>
 	</div>
 </div>
 
