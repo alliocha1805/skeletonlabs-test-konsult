@@ -21,6 +21,7 @@
 function onInputChipSelect(event: any): void {
 	inputDemo = event.detail.label;
 }
+	let experiences = [1,2,3,4,5];
 </script>
 
 <svelte:head>
@@ -44,10 +45,13 @@ function onInputChipSelect(event: any): void {
 			</div>
 		</div>
 		<!--Bloc col cote gauche-->
-		<div class="flex flex-col col-span-4 md:col-span-1">
+		<div class="flex flex-col col-span-4 xl:col-span-1">
 			<div class="card p-4 mb-4 bg-variant-filled-surface flex flex-col">
 				<h3 class= "text-center">Informations</h3>
-				<InputChip bind:input={inputChip} bind:value={inputChipList} name="chips" />
+			</div>
+			<div class="card p-4 bg-variant-filled-surface flex flex-col" style="justify-content:space-between;">
+				<h3 class= "text-center">Skills</h3>
+				<InputChip bind:input={inputChip} bind:value={inputChipList} name="chips" class="mt-4"/>
 				<div class="card w-full max-w-sm max-h-48 p-4 overflow-y-auto">
 					<Autocomplete
 						bind:input={inputChip}
@@ -56,21 +60,19 @@ function onInputChipSelect(event: any): void {
 						on:selection={onInputChipSelect}
 					/>
 				</div>
-			</div>
-			<div class="card p-4 bg-variant-filled-surface flex flex-col" style="justify-content:space-between;">
-				<h3 class= "text-center">Skills</h3>
 			</div>		
 		</div>
 		<!--Bloc Experiences-->
-		<div class="card p-4 col-span-4 bg-variant-filled-surface md:col-span-3" style="justify-content:space-between;">
+		<div class="card p-4 col-span-4 bg-variant-filled-surface xl:col-span-3" style="justify-content:space-between;">
 			<h3 class= "text-center">Expériences</h3>
+			{#each experiences as expe}
 			<div class="grid grid-cols-4">
 				<div class="col-span-1">
-					<Avatar src="https://www.francebleu.fr/s3/cruiser-production/2021/05/34c62b6c-b075-4b33-bbc4-1a92dedf2d77/1200x680_img_6957.jpg" width="w-32" class="ml-10 mt-10 hidden none md:block"/>
+					<Avatar src="https://www.francebleu.fr/s3/cruiser-production/2021/05/34c62b6c-b075-4b33-bbc4-1a92dedf2d77/1200x680_img_6957.jpg" width="w-32" class="ml-10 mt-10 hidden none 2xl:block"/>
 				</div>
-				<div class="col-span-4 md:col-span-3">
+				<div class="col-span-4 2xl:col-span-3">
 					<div class="flex flex-col">
-						<h4>Roi de Bretagne</h4>
+						<h4>Roi de Bretagne {expe}</h4>
 						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus consequat, ante a sodales sagittis, nunc urna laoreet risus, eget pulvinar turpis dui sit amet augue. Vivamus ac volutpat nunc. Aliquam imperdiet id nulla non eleifend. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque in sagitstis erat, a accumsan lectus. Curabitur ante dolor, ultricies nec mollis ut, elementum at ipsum. Suspendisse ac nisi ut est scelerisque semper. Donec sed felis pretium, fringilla nisl sit amet, vulputate eros. Vestibulum dolor justo, rhoncus vel posuere at, mattis quis velit. Duis efficitur eleifend lectus a tristique. Donec nec venenatis elit.</p>
 						<i>Jan 500 - Dec 535</i>
 						<a href="/" class="btn variant-filled m-4">Detail</a>
@@ -78,47 +80,6 @@ function onInputChipSelect(event: any): void {
 				</div>
 				<hr class="col-span-4 mt-4 mb-4"/>
 			</div>
-			<div class="grid grid-cols-4">
-				<div class="col-span-1">
-					<Avatar src="https://www.francebleu.fr/s3/cruiser-production/2021/05/34c62b6c-b075-4b33-bbc4-1a92dedf2d77/1200x680_img_6957.jpg" width="w-32" class="ml-10 mt-10 hidden none md:block"/>
-				</div>
-				<div class="col-span-4 md:col-span-3">
-					<div class="flex flex-col">
-						<h4>Roi de Bretagne</h4>
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus consequat, ante a sodales sagittis, nunc urna laoreet risus, eget pulvinar turpis dui sit amet augue. Vivamus ac volutpat nunc. Aliquam imperdiet id nulla non eleifend. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesquse in sagittis erat, a accumsan lectus. Curabitur ante dolor, ultricies nec mollis ut, elementum at ipsum. Suspendisse ac nisi ut est scelerisque semper. Donec sed felis pretium, fringilla nisl sit amet, vulputate eros. Vestibulum dolor justo, rhoncus vel posuere at, mattis quis velit. Duis efficitur eleifend lectus a tristique. Donec nec venenatis elit.</p>
-						<i>Jan 500 - Dec 535</i>
-						<a href="/" class="btn variant-filled">Detail</a>
-					</div>
-				</div>
-				<hr class="col-span-4 mt-4 mb-4"/>
-			</div>
-			<div class="grid grid-cols-4">
-				<div class="col-span-1">
-					<Avatar src="https://www.francebleu.fr/s3/cruiser-production/2021/05/34c62b6c-b075-4b33-bbc4-1a92dedf2d77/1200x680_img_6957.jpg" width="w-32" class="ml-10 mt-10 hidden none md:block"/>
-				</div>
-				<div class="col-span-4 md:col-span-3">
-					<div class="flex flex-col">
-						<h4>Roi de Bretagne</h4>
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus consequat, ante a sodales sagittis, nunc urna laoreet risus, eget pulvinar turpis dui sit amet augue. Vivamus ac volutpat nunc. Aliquam imperdiet id nulla non eleifend. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesquse in sagittis erat, a accumsan lectus. Curabitur ante dolor, ultricies nec mollis ut, elementum at ipsum. Suspendisse ac nisi ut est scelerisque semper. Donec sed felis pretium, fringilla nisl sit amet, vulputate eros. Vestibulum dolor justo, rhoncus vel posuere at, mattis quis velit. Duis efficitur eleifend lectus a tristique. Donec nec venenatis elit.</p>
-						<i>Jan 500 - Dec 535</i>
-						<a href="/" class="btn variant-filled">Detail</a>
-					</div>
-				</div>
-				<hr class="col-span-4 mt-4 mb-4"/>
-			</div>
-			<div class="grid grid-cols-4">
-				<div class="col-span-1">
-					<Avatar src="https://www.francebleu.fr/s3/cruiser-production/2021/05/34c62b6c-b075-4b33-bbc4-1a92dedf2d77/1200x680_img_6957.jpg" width="w-32" class="ml-10 mt-10 hidden none md:block"/>
-				</div>
-				<div class="col-span-4 md:col-span-3">
-					<div class="flex flex-col">
-						<h4>Roi de Bretagne</h4>
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus consequat, ante a sodales sagittis, nunc urna laoreet risus, eget pulvinar turpis dui sit amet augue. Vivamus ac volutpat nunc. Aliquam imperdiet id nulla non eleifend. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesquse in sagittis erat, a accumsan lectus. Curabitur ante dolor, ultricies nec mollis ut, elementum at ipsum. Suspendisse ac nisi ut est scelerisque semper. Donec sed felis pretium, fringilla nisl sit amet, vulputate eros. Vestibulum dolor justo, rhoncus vel posuere at, mattis quis velit. Duis efficitur eleifend lectus a tristique. Donec nec venenatis elit.</p>
-						<i>Jan 500 - Dec 535</i>
-						<a href="/" class="btn variant-filled">Detail</a>
-					</div>
-				</div>
-				<hr class="col-span-4 mt-4 mb-4"/>
-			</div>
+			{/each}
 		</div>
 </div>
