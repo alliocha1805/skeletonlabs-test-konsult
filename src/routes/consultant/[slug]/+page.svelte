@@ -14,7 +14,7 @@
 		<div class="card p-4 col-span-4 bg-variant-filled-surface flex flex-row" style="justify-content:space-between;">
 			<Avatar src="https://dnfx0kvkzsynw.cloudfront.net/websites/25/personnages/arthur.jpg" width="w-32" class="ml-10 mr-10 hidden none md:block"/>
 			<div class="flex flex-col justify-center">
-				<h3>Arthur Pendragon</h3>
+				<h2>Arthur Pendragon</h2>
 				<h4>Roi de Bretagne</h4>
 			</div>
 			<div class="flex flex-col justify-center">
@@ -25,42 +25,40 @@
 			</div>
 		</div>
 		<div class="card p-4 col-span-4 bg-variant-filled-surface flex flex-col">
-			<h2 class= "text-center">Missions</h2>
-			<TabGroup>
-				<Tab bind:group={tabSet} name="tab1" value={0}>Toutes les missions</Tab>
-				<Tab bind:group={tabSet} name="tab2" value={1}>Missions en cours</Tab>
-				<Tab bind:group={tabSet} name="tab3" value={2}>Missions terminées</Tab>
-				<!-- Tab Panels --->
-				<svelte:fragment slot="panel">
-					{#if tabSet === 0}
-			<div class="flex flex-row">
-				<a class="block card card-hover p-4 m-5 variant-filled-surface w-full 2xl: w-1/2 m-1" href="#">
-					<div class="flex flex-row">
-						<img src="https://fr.web.img6.acsta.net/r_654_368/newsv7/20/09/07/17/09/2717008.jpg" width="w-32" class="mr-10 hidden none md:block w-32 h-32"/>
-						<div class="flex flex-col justify-center">
-							<h5>Roi de Bretagne par interim</h5>
-							<p>Faut arrêter ces conneries de nord et de sud ! Une fois pour toutes, le nord, suivant comment on est tourné, ça change tout !</p>
-							<i><bold> Jan 500 - Dec 535 </bold></i>
-						</div>
+			<h3 class= "text-center">Informations</h3>
+		</div>
+		<div class="card p-4 col-span-1 bg-variant-filled-surface flex flex-col" style="justify-content:space-between;">
+			<h3>Skills</h3>
+		</div>
+		<div class="card p-4 col-span-3 bg-variant-filled-surface c" style="justify-content:space-between;">
+			<h3>Expériences</h3>
+			<div class="grid grid-cols-4">
+				<div class="col-span-1">
+					<Avatar src="https://www.francebleu.fr/s3/cruiser-production/2021/05/34c62b6c-b075-4b33-bbc4-1a92dedf2d77/1200x680_img_6957.jpg" width="w-32" class="ml-10 mt-10 hidden none md:block"/>
+				</div>
+				<div class="col-span-3">
+					<div class="flex flex-col">
+						<h4>Roi de Bretagne</h4>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus consequat, ante a sodales sagittis, nunc urna laoreet risus, eget pulvinar turpis dui sit amet augue. Vivamus ac volutpat nunc. Aliquam imperdiet id nulla non eleifend. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque in sagitstis erat, a accumsan lectus. Curabitur ante dolor, ultricies nec mollis ut, elementum at ipsum. Suspendisse ac nisi ut est scelerisque semper. Donec sed felis pretium, fringilla nisl sit amet, vulputate eros. Vestibulum dolor justo, rhoncus vel posuere at, mattis quis velit. Duis efficitur eleifend lectus a tristique. Donec nec venenatis elit.</p>
+						<i>Jan 500 - Dec 535</i>
+						<a href="/" class="btn variant-filled">Detail</a>
 					</div>
-				</a>
-				<a class="block card card-hover p-4 m-5 variant-filled-surface w-full 2xl: w-1/2 m-1" href="#">
-					<div class="flex flex-row">
-						<img src="https://fr.web.img6.acsta.net/r_654_368/newsv7/20/09/07/17/09/2717008.jpg" width="w-32" class="mr-10 hidden none md:block w-32 h-32"/>
-						<div class="flex flex-col justify-center">
-							<h5>Roi de Bretagne par interim</h5>
-							<p>Faut arrêter ces conneries de nord et de sud ! Une fois pour toutes, le nord, suivant comment on est tourné, ça change tout !</p>
-							<i><bold> Jan 500 - Dec 535 </bold></i>
-						</div>
-					</div>
-				</a>
+				</div>
+				<hr class="col-span-4 mt-4 mb-4"/>
 			</div>
-					{:else if tabSet === 1}
-						(tab panel 2 contents)
-					{:else if tabSet === 2}
-						(tab panel 3 contents)
-					{/if}
-				</svelte:fragment>
-			</TabGroup>
+			<div class="grid grid-cols-4">
+				<div class="col-span-1">
+					<Avatar src="https://www.francebleu.fr/s3/cruiser-production/2021/05/34c62b6c-b075-4b33-bbc4-1a92dedf2d77/1200x680_img_6957.jpg" width="w-32" class="ml-10 mt-10 hidden none md:block"/>
+				</div>
+				<div class="col-span-3">
+					<div class="flex flex-col">
+						<h4>Roi de Bretagne</h4>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus consequat, ante a sodales sagittis, nunc urna laoreet risus, eget pulvinar turpis dui sit amet augue. Vivamus ac volutpat nunc. Aliquam imperdiet id nulla non eleifend. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesquse in sagittis erat, a accumsan lectus. Curabitur ante dolor, ultricies nec mollis ut, elementum at ipsum. Suspendisse ac nisi ut est scelerisque semper. Donec sed felis pretium, fringilla nisl sit amet, vulputate eros. Vestibulum dolor justo, rhoncus vel posuere at, mattis quis velit. Duis efficitur eleifend lectus a tristique. Donec nec venenatis elit.</p>
+						<i>Jan 500 - Dec 535</i>
+						<a href="/" class="btn variant-filled">Detail</a>
+					</div>
+				</div>
+				<hr class="col-span-4 mt-4"/>
+			</div>
 		</div>
 </div>
