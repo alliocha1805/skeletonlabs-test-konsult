@@ -16,6 +16,9 @@
       <h3 class= "text-center xl:text-left">Informations</h3>
       <div class="flex flex-col">
         <div class="flex flex-row flex-wrap m-2" style="justify-content:space-between">
+          <p>Client:</p><a href="/client/1">Kaamelott</a>
+        </div>
+        <div class="flex flex-row flex-wrap m-2" style="justify-content:space-between">
           <p>Contact:</p><a href="mailto:roi.arthur@kaamelott.fr">roi.arthur@kaamelott.fr</a>
         </div>
         <div class="flex flex-row m-2" style="justify-content:space-between">
@@ -41,6 +44,13 @@
     </div>		
   </div>
   <div class="card p-4 col-span-4 bg-variant-filled-surface xl:col-span-3" style="justify-content:space-between;">
-    <h3>Detail Mission</h3>
+    <div class="flex flex-row" style="justify-content:space-between">
+      <h3 style="align-self:center">Detail Mission</h3>
+      <a href="/" class="btn variant-filled-primary">
+        <span><svg class="h-6 w-6 text-white"  viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">  <path stroke="none" d="M0 0h24v24H0z"/>  <path d="M9 7 h-3a2 2 0 0 0 -2 2v9a2 2 0 0 0 2 2h9a2 2 0 0 0 2 -2v-3" />  <path d="M9 15h3l8.5 -8.5a1.5 1.5 0 0 0 -3 -3l-8.5 8.5v3" />  <line x1="16" y1="5" x2="19" y2="8" /></svg></span>
+        <span>Editer</span>
+      </a>    
+    </div>
+
   </div>
 </div>
