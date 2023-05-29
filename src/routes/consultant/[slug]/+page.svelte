@@ -2,26 +2,9 @@
   import { page } from '$app/stores'
 	import { Avatar } from '@skeletonlabs/skeleton';
 	import { TabGroup, Tab } from '@skeletonlabs/skeleton';
-	import { InputChip } from '@skeletonlabs/skeleton';
-	import { Autocomplete } from '@skeletonlabs/skeleton';
-	import type { AutocompleteOption } from '@skeletonlabs/skeleton';
 	let tabSet: number = 0;
-	let inputChip = '';
-	let inputChipList: string[] = ['vanilla', 'chocolate'];
-
-	const flavorOptions: AutocompleteOption[] = [
-		{ label: 'Vanilla', value: 'vanilla', keywords: 'plain, basic', meta: { healthy: false } },
-		{ label: 'Chocolate', value: 'chocolate', keywords: 'dark, white', meta: { healthy: false } },
-		{ label: 'Strawberry', value: 'strawberry', keywords: 'fruit', meta: { healthy: true } },
-		{ label: 'Neapolitan', value: 'neapolitan', keywords: 'mix, strawberry, chocolate, vanilla', meta: { healthy: false } },
-		{ label: 'Pineapple', value: 'pineapple', keywords: 'fruit', meta: { healthy: true } },
-		{ label: 'Peach', value: 'peach', keywords: 'fruit', meta: { healthy: true } }
-	];
-
-function onInputChipSelect(event: any): void {
-	inputDemo = event.detail.label;
-}
 	let experiences = [1,2,3,4,5];
+	let competences = ["Management","Humour noir","Beni des dieux","Depressif"]
 </script>
 
 <svelte:head>
@@ -46,25 +29,37 @@ function onInputChipSelect(event: any): void {
 		</div>
 		<!--Bloc col cote gauche-->
 		<div class="flex flex-col col-span-4 xl:col-span-1">
+			<!--Bloc information-->
 			<div class="card p-4 mb-4 bg-variant-filled-surface flex flex-col">
-				<h3 class= "text-center">Informations</h3>
+				<h3 class= "text-center xl:text-left">Informations</h3>
+				<div class="flex flex-col">
+					<div class="flex flex-row flex-wrap m-2" style="justify-content:space-between">
+						<p>Email:</p><a href="mailto:roi.arthur@kaamelott.fr">roi.arthur@kaamelott.fr</a>
+					</div>
+					<div class="flex flex-row m-2" style="justify-content:space-between">
+						<p>Tel:</p><a href="tel:+33102030405">+33102030405</a>
+					</div>
+					<div class="flex flex-row m-2" style="justify-content:space-between">
+						<p>Contrat:</p><span class="chip variant-filled m-1"><b>CDI</b></span>
+					</div>
+					<div class="flex flex-row m-2" style="justify-content:space-between">
+						<p>Status:</p><span class="chip variant-filled-primary m-1"><b>Actif</b></span>
+					</div>
+				</div>
 			</div>
+			<!--Bloc competences-->
 			<div class="card p-4 bg-variant-filled-surface flex flex-col" style="justify-content:space-between;">
-				<h3 class= "text-center">Skills</h3>
-				<InputChip bind:input={inputChip} bind:value={inputChipList} name="chips" class="mt-4"/>
-				<div class="card w-full max-w-sm max-h-48 p-4 overflow-y-auto">
-					<Autocomplete
-						bind:input={inputChip}
-						options={flavorOptions}
-						denylist={inputChipList}
-						on:selection={onInputChipSelect}
-					/>
+				<h3 class= "text-center xl:text-left">Skills</h3>
+				<div class="flex flex-row flex-wrap mt-2" style="justify-content:stretch;">
+					{#each competences as compe}
+						<span class="chip variant-filled m-1"><b>{compe}</b></span>
+					{/each}
 				</div>
 			</div>		
 		</div>
 		<!--Bloc Experiences-->
 		<div class="card p-4 col-span-4 bg-variant-filled-surface xl:col-span-3" style="justify-content:space-between;">
-			<h3 class= "text-center">Expériences</h3>
+			<h3 class= "text-center mb-2 xl:text-left">Expériences</h3>
 			{#each experiences as expe}
 			<div class="grid grid-cols-4">
 				<div class="col-span-1">
@@ -75,7 +70,7 @@ function onInputChipSelect(event: any): void {
 						<h4>Roi de Bretagne {expe}</h4>
 						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus consequat, ante a sodales sagittis, nunc urna laoreet risus, eget pulvinar turpis dui sit amet augue. Vivamus ac volutpat nunc. Aliquam imperdiet id nulla non eleifend. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque in sagitstis erat, a accumsan lectus. Curabitur ante dolor, ultricies nec mollis ut, elementum at ipsum. Suspendisse ac nisi ut est scelerisque semper. Donec sed felis pretium, fringilla nisl sit amet, vulputate eros. Vestibulum dolor justo, rhoncus vel posuere at, mattis quis velit. Duis efficitur eleifend lectus a tristique. Donec nec venenatis elit.</p>
 						<i>Jan 500 - Dec 535</i>
-						<a href="/" class="btn variant-filled m-4">Detail</a>
+						<a href="/mission/1" class="btn variant-filled m-4">Detail</a>
 					</div>
 				</div>
 				<hr class="col-span-4 mt-4 mb-4"/>
