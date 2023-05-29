@@ -1,15 +1,14 @@
 <script lang="ts">
   import { page } from '$app/stores'
 	import { Avatar } from '@skeletonlabs/skeleton';
-	import { TabGroup, Tab } from '@skeletonlabs/skeleton';
-	let tabSet: number = 0;
 	let experiences = [1,2,3,4,5];
 	let competences = ["Management","Humour noir","Beni des dieux","Depressif"]
+	let nom = "Arthur Pendragon"
 </script>
-
+ 
 <svelte:head>
-	<title>Consultant {$page.params.slug}</title>
-	<meta name="description" content="About this app" />
+	<title>Page Consultant {nom}</title>
+	<meta name="description" content="Page profil "{nom} />
 </svelte:head>
 
 <div class="p-10 space-4 grid grid-cols-1 gap-4 md:grid grid-cols-4 gap-4">
