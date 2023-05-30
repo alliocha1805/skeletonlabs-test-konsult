@@ -5,7 +5,7 @@
 	import { h, PluginPosition } from "gridjs";	
 	import { goto } from '$app/navigation';
 	function routeToPage(route: string, replaceState: boolean) {
-   goto(`/${route}`, { replaceState }) 
+    goto(`/${route}`, { replaceState }) 
 	}
 
 	const columns=[
@@ -16,7 +16,16 @@
 		'Nombre de consultant',
 		'Nombre de mission',
     { 
-        name: 'Actions',
+        name: 'Liste consultant avec cette compétence',
+        formatter: (cell, row) => {
+          return h('button', {
+            className: 'btn variant-filled-primary',
+            onClick: () => routeToPage('competence/'+row.cells[0].data,false)
+          }, 'Voir');
+        }
+      },
+    { 
+        name: 'Liste client demandant cette compétence',
         formatter: (cell, row) => {
           return h('button', {
             className: 'btn variant-filled-primary',
@@ -45,7 +54,9 @@
 		input:'input',
 		pagination: 'flex flex-col justify-end',
 		header: "text-black",
-		container : 'table-container'
+		container : 'table-container',
+    td: 'text-center',
+    th: 'text-center'
 	};
 	const language = frFR;
 
@@ -64,5 +75,7 @@
 </div>
 
 <style>
-
+td{
+  text-align: 'center'
+}
 </style>
