@@ -13,6 +13,7 @@
 		<li><a href="/consultant" on:click={drawerClose}>Consultant</a></li>
 		<li><a href="/mission" on:click={drawerClose}>Missions</a></li>
 		<li><a href="/client" on:click={drawerClose}>Clients</a></li>
+		<li><a href="/competence" on:click={drawerClose}>Compétences</a></li>
 		<li><a href="/about" on:click={drawerClose}>About</a></li>
 	</ul>
 </nav>
