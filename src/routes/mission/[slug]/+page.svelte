@@ -17,6 +17,9 @@
       <h3 class= "text-center xl:text-left">Informations</h3>
       <div class="flex flex-col">
         <div class="flex flex-row flex-wrap m-2" style="justify-content:space-between">
+          <p>Consultant:</p><a href="/consultant/1">Arthur Pendragon</a>
+        </div>
+        <div class="flex flex-row flex-wrap m-2" style="justify-content:space-between">
           <p>Client:</p><a href="/client/1">Kaamelott</a>
         </div>
         <div class="flex flex-row flex-wrap m-2" style="justify-content:space-between">
