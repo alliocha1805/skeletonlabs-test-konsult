@@ -108,14 +108,12 @@ import '@skeletonlabs/skeleton/themes/theme-skeleton.css';
 	<div class="card p-4 col-span-2 mb-5 lg:m-0 2xl:col-span-1">
 		<div class="p-4 flex flex-row -mx-3">
 			<div class="flex-none w-2/3 max-w-full px-3">
-				<p class="mb-0 font-sans font-semibold leading-normal text-lg">Clients Inactifs</p>
+				<p class="mb-0 font-sans font-semibold leading-normal text-lg">Compétences dans le cabinet</p>
 				<h5 class="text-green mb-0 font-bold">24</h5>
 			</div>
 			<div class="px-3 text-right basis-1/3">
 				<div class="inline-block w-12 h-12 text-center 500">
-					<svg class="h-16 w-16 text-red-500"  fill="none" viewBox="0 0 24 24" stroke="currentColor">
-						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 17h8m0 0V9m0 8l-8-8-4 4-6-6"/>
-					</svg>
+					<svg class="h-16 w-16 text-green-500"  width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">  <path stroke="none" d="M0 0h24v24H0z"/>  <circle cx="12" cy="9" r="6" />  <polyline points="9 14.2 9 21 12 19 15 21 15 14.2" transform="rotate(-30 12 9)" />  <polyline points="9 14.2 9 21 12 19 15 21 15 14.2" transform="rotate(30 12 9)" /></svg>
 				</div>
 			</div>
 		</div>
