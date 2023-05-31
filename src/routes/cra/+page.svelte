@@ -1,24 +1,19 @@
 <script lang="ts">
+	import { RevoGrid } from "@revolist/svelte-datagrid";
 </script>
 <svelte:head>
-	<title>About</title>
-	<meta name="description" content="About this app" />
+	<title>Comptes Rendus D'activité</title>
+	<meta name="description" content="Comptes rendus d'activité" />
 </svelte:head>
 
 <!--Une idée serait d'avoir deux "picker" : MOIS et ANNEE ou un Range picker de date. A partir de la on affichera une Grid custom avec le plugin https://revolist.github.io/revogrid/. Ce plugin peut stocker en fichier/blob ou string-->
-<div class="p-10 space-4">
-	<h1 class="pb-5">Page des Compte Rendu d'Activité</h1>
-
-	<p>
-		This is a <a href="https://kit.svelte.dev">SvelteKit</a> app. You can make your own by typing the
-		following into your command line and following the prompts:
-	</p>
-
-	<pre>npm create svelte@latest</pre>
-
-	<p>
-		The page you're looking at is purely static HTML, with no client-side interactivity needed.
-		Because of that, we don't need to load any JavaScript. Try viewing the page's source, or opening
-		the devtools network panel and reloading.
-	</p>
+<div class="p-10 grid grid-cols-4 gap-4">
+	<div class="flex flex-col col-span-4 xl:col-span-1">
+		<div class="card p-4 bg-variant-filled-surface flex flex-col">
+			<h3>Mon équipe</h3>
+		</div>
+	</div>
+	<div class="card p-4 mb-4 bg-variant-filled-surface flex flex-col col-span-4 xl:col-span-3">
+		<h3>Feuille de temps</h3>
+	</div>
 </div>
